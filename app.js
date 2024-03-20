@@ -7,7 +7,7 @@ const bodyParser=require("body-parser")
 const errorMiddleware=require("./middleware/error")
 app.use(cors(
     {
-        origin:["http://localhost:3000"],
+        origin:["https://ng-client.vercel.app"],
         methods:["GET","POST","PUT","DELETE"],
         credentials:true
     }
