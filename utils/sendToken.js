@@ -7,7 +7,6 @@ const sendToken=(user,statusCode,res)=>{
             httpOnly:true,
             secure: true,
             path: '/',
-            domain:'vercel.app',
             sameSite: 'none'
         
     };
