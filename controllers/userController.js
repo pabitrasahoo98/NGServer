@@ -3,6 +3,7 @@ const catchAsyncError=require("../middleware/catchAsyncError");
 const User=require("../model/userModel");
 const sendToken = require("../utils/sendToken");
 const sendEmail=require("../utils/sendEmail");
+const logoutToken = require("../utils/logoutToken");
 //const crypto=require("crypto");
 
 //register user
@@ -30,11 +31,7 @@ exports.loginUser=catchAsyncError(async(req,res,next)=>{
 })
 //logout user
 exports.logout=catchAsyncError(async(req,res,next)=>{
-    res.clearCookie("token").status(200).json({
-        sucess:true,
-        message:"logged out"
-    });
-    
+  logoutToken("",200,res);
 
 });
 //forgot password
