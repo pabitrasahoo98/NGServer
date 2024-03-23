@@ -20,6 +20,7 @@ router.route("/password/reset").put(resetPassword);
 router.route("/me").get(isAuthenticateUser,getUserDetails);
 router.route("/password/update").put(isAuthenticateUser,updatePassword);
 router.route("/me/update").put(isAuthenticateUser,updateProfile);
+router.route("/logout").post(logout)
 
 router
   .route("/admin/users")
@@ -33,6 +34,6 @@ router
 
 
 
-router.route("/logout").post(logout)
+
 
 module.exports=router

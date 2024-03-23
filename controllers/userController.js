@@ -30,8 +30,7 @@ exports.loginUser=catchAsyncError(async(req,res,next)=>{
 })
 //logout user
 exports.logout=catchAsyncError(async(req,res,next)=>{
-    res.cookie("token",null,{expires: new Date(0),secure: true,path: '/',sameSite: 'none'});
-    res.status(200).json({
+    res.clearCookie("token").status(200).json({
         sucess:true,
         message:"logged out"
     });
