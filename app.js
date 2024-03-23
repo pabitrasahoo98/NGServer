@@ -10,7 +10,6 @@ app.use(cors(
         origin:["https://ng-client.vercel.app"],
         methods:["GET","POST","PUT","DELETE"],
         credentials:true,
-        exposedHeaders: ['Set-Cookie', 'Cookie'],
     }
 ));
 
