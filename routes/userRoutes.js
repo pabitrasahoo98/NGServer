@@ -33,6 +33,6 @@ router
 
 
 
-router.route("/logout").get(logout)
+router.route("/logout").post(logout)
 
 module.exports=router
