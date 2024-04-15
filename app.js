@@ -34,6 +34,9 @@ app.use("/api/v1",product);
 app.use("/api/v1",user);
 app.use("/api/v1",pinCode);
 app.use("/api/v1",carousel);
+app.get("/", (req, res) => {
+    res.send("Server is working");
+  });
 
 //middleware for error
 app.use(errorMiddleware);
